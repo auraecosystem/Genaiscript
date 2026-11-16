@@ -134,3 +134,12 @@
     "zx": "catalog:"
   }
 }
+{
+  ...,
+  "devDependencies": {
+    ...,
+    "@genaiscript/eslint-plugin-genaiscript": "^1.0.0",
+    ...
+  },
+  ...
+}
