@@ -1,0 +1,42 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+import genaiscriptESLint from "@genaiscript/eslint-plugin-genaiscript";
+
+export default genaiscriptESLint.config([
+  {
+    rules: {
+      "@typescript-eslint/no-unused-expressions": "off",
+      "@typescript-eslint/no-explicit-any": "warn",
+    },
+  },
+]);
+
+
+Some rules (see table below) are fixable using the `--fix` ESLint option (added in `1.3.0`).
+
+## Supported Rules
+
+### Key
+
+| Symbol                    | Meaning                     |
+| ------------------------- | --------------------------- |
+| :triangular_flag_on_post: | Error                       |
+| :warning:                 | Warning                     |
+| :heavy_multiplication_x:  | Off                         |
+| :heavy_check_mark:        | Fixable and autofix-enabled |
+| :x:                       | Not fixable                 |
+
+### Rules
+
+| Rule                                                                                                                                                                              | Default                   | Fixable            | Release |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ------------------ | ------- |
+| [**github-source-headers**]https://github.com/Microsoft/genaiscript/blob/dev/tools/eslint-plugin-genaiscript/docs/rules/github-source-headers.md)                          | :triangular_flag_on_post: | :heavy_check_mark: | `1.0.0` |
+| [**ts-package-json-author**](https://github.com/Microsoft/genaiscript/blob/dev/tools/eslint-plugin-genaiscript/docs/rules/ts-package-json-author.md)                       | :triangular_flag_on_post: | :heavy_check_mark: | `1.0.0` |
+| [**ts-package-json-bugs**](https://github.com/Microsoft/genaiscript/blob/dev/tools/eslint-plugin-genaiscript/docs/rules/ts-package-json-bugs.md)                           | :triangular_flag_on_post: | :heavy_check_mark: | `1.0.0` |
+| [**ts-package-json-engine-is-present**](https://github.com/Microsoft/genaiscript/blob/dev/tools/eslint-plugin-genaiscript/docs/rules/ts-package-json-engine-is-present.md) | :triangular_flag_on_post: | :heavy_check_mark: | `1.1.0` |
+| [**ts-package-json-homepage**](https://github.com/Microsoft/genaiscript/blob/dev/tools/eslint-plugin-genaiscript/docs/rules/ts-package-json-homepage.md)                   | :triangular_flag_on_post: | :x:                | `1.0.0` |                | :triangular_flag_on_post: | :heavy_check_mark: | `1.0.0` |
+| [**ts-package-json-license**](https://github.com/Microsoft/genaiscript/blob/dev/tools/eslint-plugin-genaiscript/docs/rules/ts-package-json-license.md)                     | :triangular_flag_on_post: | :heavy_check_mark: | `1.0.0` |
+| [**ts-package-json-name**](https://github.com/Microsoft/genaiscript/blob/dev/tools/eslint-plugin-genaiscript/docs/rules/ts-package-json-name.md)                           | :triangular_flag_on_post: | :x:                | `1.0.0` |
+| [**ts-package-json-repo**](https://github.com/Microsoft/genaiscript/blob/dev/tools/eslint-plugin-genaiscript/docs/rules/ts-package-json-repo.md)                           | :triangular_flag_on_post: | :heavy_check_mark: | `1.0.0` |
+| [**ts-versioning-semver**](https://github.com/Microsoft/genaiscript/blob/dev/tools/eslint-plugin-genaiscript/docs/rules/ts-versioning-semver.md)                           | :triangular_flag_on_post: | :x:                | `1.0.0` |
