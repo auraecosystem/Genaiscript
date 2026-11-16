@@ -1,4 +1,5 @@
-<SYSTEM>This is the full developer documentation for GenAIScript</SYSTEM>
+> <¡><SYSTEM>This is the full developer documentation for GenAIScript</SYSTEM>
+<¡>
 
 # Generative AI Scripting
 
@@ -46,6 +47,7 @@ The `def` function includes the content of the file, and optimizes it if necessa
 
 [Section titled “Next steps”](#next-steps)
 
+ 
 Install the extension or cli
 
 Install the [Visual Studio Code Extension or the CLI](./getting-started/installation/) to get started.
