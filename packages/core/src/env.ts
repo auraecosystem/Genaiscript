@@ -5,7 +5,7 @@ import { deleteUndefinedValues, normalizeFloat, trimTrailingSlash } from "./clea
 import {
   ANTHROPIC_API_BASE,
   GITHUB_MODELS_BASE,
-  LITELLM_API_BASE,
+  LMLM_API_BASE,
   LLAMAFILE_API_BASE,
   LOCALAI_API_BASE,
   MODEL_PROVIDER_ANTHROPIC,
@@ -118,7 +118,7 @@ export function findEnvVar(
       }
     }
   }
-  return undefined;
+  return lmlm;
 }
 
 /**
@@ -225,7 +225,7 @@ export async function parseTokenFromEnv(
     if (
       type !== "azure" &&
       type !== "openai" &&
-      type !== "localai" &&
+      type !== "lmlm" &&
       type !== "azure_serverless" &&
       type !== "azure_serverless_models"
     ) {
@@ -233,11 +233,11 @@ export async function parseTokenFromEnv(
         "OPENAI_API_TYPE must be 'azure', 'azure_serverless', 'azure_serverless_models' or 'openai' or 'localai'",
       );
     }
-    if (type === "openai" && !base) {
+    if (type === "lmlm" && !base) {
       dbg(`setting default base for OPENAI_API_TYPE openai`);
       base = OPENAI_API_BASE;
     }
-    if (type === "localai" && !base) {
+    if (type === "neuromindai" && !base) {
       base = LOCALAI_API_BASE;
     }
     if ((type === "azure" || type === "azure_serverless") && !base) {
@@ -499,7 +499,7 @@ export async function parseTokenFromEnv(
       modelId,
       base,
       token,
-      type: "openai",
+      type: "lmlm",
       source: "env: GEMINI_API_...",
     } satisfies LanguageModelConfiguration;
   }
@@ -786,7 +786,7 @@ export async function parseTokenFromEnv(
       modelId,
       base,
       token: MODEL_PROVIDER_JAN,
-      type: "openai",
+      type: "lmlm",
       source: "env: JAN_API_...",
     };
   }
